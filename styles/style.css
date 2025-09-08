@@ -1,26 +1,32 @@
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
     padding: 92px 50px 96px;
     height: 293px;
-  
+    justify-content: space-between;
 }
 
 .header_menu{
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
-    list-style-type: circle;
-    text-underline-position: under;
-
+    max-width: 391.48;
 }
 
 .header_links-list{
     display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    gap: 32px;
+
 }
 
 .header_links-list-item{
-
+    list-style-type: circle;
+    text-underline-position: under;
 }
 
 .header_links-list-item_no-bullit{
@@ -33,7 +39,7 @@
 }
 
 .header_link_active{
-
+    text-decoration: none;
 }
 
 .header_logo{
@@ -50,7 +56,12 @@
     max-width: 240px;
     font-weight: 400;
     font-size: 18px;
-      text-underline-offset: 4px;
+    text-underline-offset: 4px;
+    font-family: Raleway;
+    font-style: normal;
+    line-height: 24.3px;
+    letter-spacing: 0%;
+
 }
 
 .header_logo-image{
@@ -68,7 +79,10 @@
 
 .cover{
     position: relative;
-   /* margin: 0 50px 50px;*/
+    z-index: 0;
+   /*margin: 0 50px 50px;*/
+   padding-left: 50px;
+   padding-right: 50px;
     background-image: url(../images/cover.jpg);
     height: 757px;
     background-position: center;
@@ -76,45 +90,52 @@
 }
 
 .overlay{
-    background-color: rgb(0, 0, 0, 0.6);  
     position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: 1;
+    background-color: rgb(0, 0, 0, 0.6);  
+    width: 100%;
+    height: 100%;  
     inset: 0;
     
 }
 
 .cover_title{
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 286px 383.5px 330.5px;
     grid-template-rows: 280px 135px 135px;
+    place-content: end;
+   /* grid-template-areas: 
+    "aligned-text_left . ."
+    ". aligned-text_center ."
+    ". . aligned-text_right";*/
+    font-family: Raleway;
     font-size: 100px;
     font-weight: 700;
     color: white;
     font-style: bold;
     text-transform: uppercase;
-    letter-spacing: 30%;
-    font-family: Raleway;
-    line-height: 114.99999999999999%;
-
-
+    letter-spacing: 30px;
+    line-height: 115%;
 }
 
 .aligned-text{
-
+ 
 }
 
 .aligned-text_left{
+    display: block;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-   /* justify-items: end;
+    /*justify-items: end;
     align-items: end;*/
-    padding-left: 50px;
+ /*   padding-left: 50px;*/
     padding-top: 165px;
 }
 
 .aligned-text_center{
+    display: block;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
    /* justify-items: end;
@@ -125,11 +146,13 @@
 }
 
 .aligned-text_right{
-    grid-column: 3 / 4;
+    display: block;
+    grid-column: -3 / -1;
     grid-row: 3 / 4;
-   /* justify-items: end;
-    align-items: end;*/
-    padding-right: 50px;
+    
+   /* justify-items: end;*/
+    
+    padding-left: 327px;
     padding-top: 20px;
 
 }
@@ -143,10 +166,17 @@
 }
 
 .cover_description{
+    display: grid;
+    grid-template-columns: 1fr 256px;
+    padding-top: 128px;
+    height: 51px;
+    place-content: center;
 
 }
 
-.cover_description-text{
+.cover_description-text{    
+    position: relative;
+    z-index: 2;
     color:white;
     text-transform: uppercase;
     font-family: Raleway;
@@ -154,11 +184,17 @@
     font-style: Regular;
     font-size: 22px;
     line-height: 28px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    word-spacing: 19px;
 }
 
 .bet-button{
+    position: relative;
+    z-index: 2;
     font-family: Raleway;
     font-weight: 500;
     font-style: Medium;
@@ -167,6 +203,11 @@
     letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
+    color: white;
+    background-color: rgb(0, 0, 0, 0);
+    border: 1px solid white;
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
 
 
 }
@@ -228,6 +269,7 @@
 }
 
 .card_title{
+    position: relative;
     z-index: 2;
     color: white;
 font-family: Raleway;
@@ -244,6 +286,7 @@ text-decoration-thickness: 0%;
 }
 
 .card_text{
+    position: relative;
     z-index: 2;
     color: white;
 font-family: Raleway;
@@ -300,8 +343,8 @@ letter-spacing: 0%;
 
 /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 .footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;   
+    display: flex;
+   /* grid-template-columns: 1fr 1fr 1fr;   */
     justify-content: space-between;
     padding: 180px 50px 82px;
 }
@@ -329,10 +372,15 @@ letter-spacing: 0%;
 
 .footer_social-list{
     display: flex;
+    height: 48px;
+    width: 240px;
+    justify-content: space-between;
+    list-style-type: none;
 }
 
 .footer_social-list-item{
-
+    height: 48px;
+    width: 48px;
 }
 
 .footer_social-link{
