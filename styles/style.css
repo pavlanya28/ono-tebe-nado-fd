@@ -1,13 +1,22 @@
 .header {
-
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    padding: 92px 50px 96px;
+    height: 293px;
+  
 }
 
 .header_menu{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    list-style-type: circle;
+    text-underline-position: under;
 
 }
 
 .header_links-list{
-
+    display: flex;
 }
 
 .header_links-list-item{
@@ -15,7 +24,8 @@
 }
 
 .header_links-list-item_no-bullit{
-
+    list-style-type: none;
+    text-decoration: none;
 }
 
 .header_link{
@@ -27,7 +37,8 @@
 }
 
 .header_logo{
-
+    width: 148px;
+    height: 105px;
 }
 
 .header_logo-image{
@@ -35,7 +46,11 @@
 }
 
 .address{
-
+    justify-self: end;
+    max-width: 240px;
+    font-weight: 400;
+    font-size: 18px;
+      text-underline-offset: 4px;
 }
 
 .header_logo-image{
@@ -52,14 +67,37 @@
 }
 
 .cover{
-
+    position: relative;
+   /* margin: 0 50px 50px;*/
+    background-image: url(../images/cover.jpg);
+    height: 757px;
+    background-position: center;
+    background-size: cover;
 }
 
 .overlay{
-
+    background-color: rgb(0, 0, 0, 0.6);  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    inset: 0;
+    
 }
 
 .cover_title{
+    display: grid;
+    grid-template-columns: 286px 383.5px 330.5px;
+    grid-template-rows: 280px 135px 135px;
+    font-size: 100px;
+    font-weight: 700;
+    color: white;
+    font-style: bold;
+    text-transform: uppercase;
+    letter-spacing: 30%;
+    font-family: Raleway;
+    line-height: 114.99999999999999%;
+
 
 }
 
@@ -68,14 +106,31 @@
 }
 
 .aligned-text_left{
-
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+   /* justify-items: end;
+    align-items: end;*/
+    padding-left: 50px;
+    padding-top: 165px;
 }
 
 .aligned-text_center{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+   /* justify-items: end;
+    align-items: end;*/
+    padding-left: 44.5px;
+    padding-top: 20px;
 
 }
 
 .aligned-text_right{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+   /* justify-items: end;
+    align-items: end;*/
+    padding-right: 50px;
+    padding-top: 20px;
 
 }
 
@@ -92,25 +147,54 @@
 }
 
 .cover_description-text{
-
+    color:white;
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
 
 .bet-button{
+    font-family: Raleway;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+
 
 }
 
 
 /*LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS*/
 .lots{
-
+    position: relative;
+    padding: 180px 24px 0 24px;
+    height: 723px;
 }
 
 .lots_heading{
+    font-family: Raleway;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 
 }
 
 .lots_card-list{
-
+    display: grid;
+    grid-template-columns: 334px 334px 334px;
+    gap: 25px;
+    list-style-type: none;
 }
 
 .lots_card-list-item{
@@ -122,26 +206,53 @@
 }
 
 .card{
-
+    position: relative;
+    height: 596px;
+    width: 334px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .card_type_film{
-
+    background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book{
-
+   background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture{
+    background-image: url(../images/card-lot-03.jpg);
 
 }
 
 .card_title{
+    z-index: 2;
+    color: white;
+font-family: Raleway;
+font-weight: 700;
+font-style: Bold;
+font-size: 22px;
+line-height: 120%;
+letter-spacing: 0%;
+text-transform: uppercase;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
 
 }
 
 .card_text{
+    z-index: 2;
+    color: white;
+font-family: Raleway;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0%;
+
 
 }
 
@@ -152,57 +263,72 @@
 
 /*ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT*/
 .about{
-
+    display: grid;
+    grid-template-columns: 359px 1fr;
+    padding: 120px 24px 0;
 }
 
 .about_column{
 
 }
 
-.about_logo{
-
+.about_logo{ 
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #000000;
+    width: 240px;
+    height: 240px;
+    margin: 35px 0 0 47px;
 }
 
 .about_logo-image{
-
+    width: 148px;
+    height: 114px;
+    display: block;
+    margin: 64px 45.52px 62px 46.48px;
 }
 
 .about_title{
-
+    margin-top: 136px;
 }
 
 .about_text{
-
+    margin-top: 100px;
 }
 
 
 /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 .footer{
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    justify-content: space-between;
+    padding: 180px 50px 82px;
 }
 
 .footer_menu{
-
+    justify-items: center;
 }
 
 .footer_menu-list{
-
+    list-style-type: none;
 }
 
 .footer_menu-list-item{
-
+    text-align: center;
 }
 
 .footer_menu-link{
-
+    text-decoration: none;
 }
 
 .footer_menu-link_active{
-
+    text-underline-offset: 4px;
+    text-decoration: underline;
 }
 
 .footer_social-list{
-
+    display: flex;
 }
 
 .footer_social-list-item{
