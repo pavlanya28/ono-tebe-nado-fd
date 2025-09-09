@@ -19,7 +19,6 @@
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-   /* text-underline-offset: 4px;*/
     text-decoration-thickness: 1px;
     gap: 32px;
 
@@ -58,11 +57,9 @@
 
 }
 
-/*MAIN MAIN MAIN MAIN MAIN MAIN  MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN*/
 .cover {
     position: relative;
     z-index: 0;
-   /*margin: 0 50px 50px;*/
    padding-left: 50px;
    padding-right: 50px;
     background-image: url(../images/cover.jpg);
@@ -88,10 +85,6 @@
     grid-template-columns: 286px 383.5px 330.5px;
     grid-template-rows: 280px 135px 135px;
     place-content: end;
-   /* grid-template-areas: 
-    "aligned-text_left . ."
-    ". aligned-text_center ."
-    ". . aligned-text_right";*/
     font-family: Raleway;
     font-size: 100px;
     font-weight: 700;
@@ -106,9 +99,6 @@
     display: block;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    /*justify-items: end;
-    align-items: end;*/
- /*   padding-left: 50px;*/
     padding-top: 165px;
 }
 
@@ -116,8 +106,6 @@
     display: block;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-   /* justify-items: end;
-    align-items: end;*/
     padding-left: 44.5px;
     padding-top: 20px;
 
@@ -127,9 +115,6 @@
     display: block;
     grid-column: -3 / -1;
     grid-row: 3 / 4;
-    
-   /* justify-items: end;*/
-    
     padding-left: 327px;
     padding-top: 20px;
 
@@ -178,7 +163,6 @@
 }
 
 
-/*LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS LOTS*/
 .lots {
     position: relative;
     padding: 185px 24px 0 24px;
@@ -289,7 +273,6 @@
 }
 
 
-/*ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT*/
 .about {
     display: grid;
     grid-template-columns: 359px 1fr;
@@ -336,10 +319,8 @@
     margin-top: 24px;
 }
 
-/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 .footer {
     display: flex;
-   /* grid-template-columns: 1fr 1fr 1fr;   */
     justify-content: space-between;
     padding: 180px 50px 82px;
 }
@@ -389,4 +370,3 @@
 }
 
 
-/*Повторяющиеся теги:address, overlay*/
