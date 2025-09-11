@@ -62,7 +62,7 @@
     padding-left: 50px;
     padding-right: 50px;
     background-image: url(../images/cover.jpg);
-    min-height: 757px;
+  /*  min-height: 757px;*/
     background-position: center;
     background-size: cover;
 }
@@ -80,11 +80,14 @@
 .cover_title {
     position: relative;
     z-index: 2;
-    display: grid;
+    /*display: grid;
     grid-template-columns: 1fr 1fr 1fr; /*286px 383.5px 330.5px;*/
-    grid-template-rows: 1fr 1fr 1fr; /*280px 135px 135px;*/
-    height: 550px;
-    place-content: end;
+   /* grid-template-rows: 1fr 1fr 1fr; /*280px 135px 135px;*/
+   /* height: 550px;*/
+   /* place-content: end;*/
+
+    display: flex;
+    flex-direction: column;
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-size: 100px;
     font-weight: 700;
@@ -96,33 +99,41 @@
 }
 
 .aligned-text_left {
-    display: block;
+   /* display: block;
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-row: 1 / 2;*/
     padding-top: 165px;
 }
 
 .aligned-text_center {
-    display: block;
+    text-align: center;
+   /* display: block;
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    padding-left: 15px;
+    grid-row: 2 / 3;*/
+    padding-left: 30px;
     padding-top: 20px;
-
+   /* padding-bottom: 0;
+    margin-bottom: 0;*/
 }
 
 .aligned-text_right {
-    display: block;
+    text-align: end;
+    padding-left: 614px;
+    padding-top: 20px;
+    /*display: block;
     grid-column: -3 / -1;
     grid-row: 3 / 4;
     padding-left: 298px;
-    padding-top: 20px;
+    margin-top: 0;
+    justify-items: start;
+    align-items: start;*/
 }
 
 .cover_description {
     display: grid;
     grid-template-columns: 1fr 256px;
     padding-top: 104px;
+    padding-bottom: 46px;
     place-content: center;
 }
 
@@ -146,7 +157,6 @@
     z-index: 2;
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-style: Medium;
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -163,7 +173,7 @@
 .lots {
     position: relative;
     padding: 185px 24px 0 24px;
-    min-height: 723px;
+    /*min-height: 723px;*/
     margin-bottom: 153px;
 }
 
@@ -184,7 +194,7 @@
     grid-template-columns: 334px 334px 334px;
     gap: 25px;
     list-style-type: none;
-    min-height: 596px;
+   /* min-height: 596px;*/
     padding-top: 3px;
 }
 
@@ -351,7 +361,7 @@
 
 .footer_social-list {
     display: flex;
-    min-height: 48px;
+    /*min-height: 48px;*/
     width: 240px;
     justify-content: space-between;
     list-style-type: none;
